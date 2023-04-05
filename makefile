@@ -7,5 +7,6 @@ inject: ~/.config/fish/functions/fish_greeting.fish
 	
 
 ~/.config/fish/functions/fish_greeting.fish: ~/.config/fish/functions
-	mkdir -p $<
 	touch $@
+~/.config/fish/functions:
+	mkdir -p $@
