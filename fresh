@@ -45,7 +45,7 @@ while Input!="exit":
         elif split[0] in shells:
             print(f"fish: /bin/{split[0]}: Zugriff verweigert")
         elif split[0] in binshells:
-            print(f"fish: {split[0]}: Zugriff verweigert"
+            print(f"fish: {split[0]}: Zugriff verweigert")
         else:
             os.system('fish -c "{Input}"')
     except:
