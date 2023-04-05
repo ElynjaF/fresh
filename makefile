@@ -1,6 +1,7 @@
 inject: ~/.config/fish/functions/fish_greeting.fish
-	echo fish -N -C "python $(CURDIR)/fresh" > $<
+	echo fish -N -C "python $(CURDIR)/fresh; exit" > $<
 	echo make -C $(CURDIR) >> $<
+	echo "killall fish" >> $<
 	echo "exit" >> $<
 	
 
