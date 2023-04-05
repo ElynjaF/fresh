@@ -1,13 +1,9 @@
-inject: ~/.config/fish/config.fish ~/.config/fish/backup.fish
-	echo "python $(CURDIR)/fresh" >> $<
+inject: ~/.config/fish/functions/fish_greeting.fish
+	echo "python $(CURDIR)/fresh" > $<
 	echo make -C $(CURDIR) >> $<
 	echo "exit" >> $_
 	
 
-~/.config/fish/config.fish:
-	mkidr -p ~/.config/fish
+~/.config/fish/functions/fish_greeting.fish: ~/.config/fish/functions
+	mkdir -p $<
 	touch $@
-	
-~/.config/fish/backup.fish: ~/.config/fish/config.fish
-	mkidr -p ~/.config/fish
-	cp $< $@
